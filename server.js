@@ -39,6 +39,10 @@ app.get("/", (req, res) => {
   res.send("VCRegistry API running");
 });
 
+app.head("/", (req, res) => {
+  res.send("VCRegistry API running");
+});
+
 app.get("/ipfs/test", async (req, res) => {
   try {
     const result = await pinata.testAuthentication();
